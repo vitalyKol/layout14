@@ -1,10 +1,10 @@
 {
-  "name": "project-title",
+  "name": "sports landing page",
   "version": "1.0.0",
-  "description": "project description",
-  "author": "author",
-  "email": "author@email.com",
-  "url": "https://project.ru",
+  "description": "landing",
+  "author": "Vitaly",
+  "email": "---@email.com",
+  "url": "---",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
