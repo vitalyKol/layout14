@@ -1,13 +1,198 @@
 // out: null
 
+//Common
+//===============================
 
-/*===========================
-Table of Content
+.section{
+	padding: 110px 0;
+}
+.wrapper{
+	width: 1170px;
+	margin: auto;
+}
+.title{
+	font-family: "Montserrat-bold", arial;
+	color:#fff;
+	text-transform: uppercase;
+}
+.title_size_xl{
+	font-size: 48px; 
+}
+.title_size_l{
+	font-size: 30px;
+}
+.title_size_m{
+	font-size: 16px;
+}
+.title_size_s{
+	font-size: 14px;
+}
+.title_section{
+	margin-bottom: 120px;
+	&::after{
+		content: "–";
+		position: relative;
+		left:20px;
+	}
+	&::before{
+		content: "–";
+		position: relative;
+		right:20px;
+	}
+}
+.title_theme_dark{
+	color: #000;
+}
+.quote{
+	font-family: "Open-sans-italic", arial;
+	color:#fff;
+}
+.quote_size_m{
+	font-size: 18px;
+	line-height: 48px;
+}
+.quote_size_s{
+	font-size: 14px;
+}
+.button{
+	font-family: "Montserrat-bold", arial;
+	font-size: 12px;
+	border: 1px solid #fff;
+	color:#fff;
+	background: transparent;
+	padding: 20px 15px;
+}
+.flex-row{
+	display: flex;
+	justify-content: center;
+	flex-flow:row wrap;
+}
+.flex-col{
+	display: flex;
+	justify-content: center;
+	flex-flow:column wrap;
+}
+.center{
+	text-align: center;
+}
+.card{
+	background-color: #fff;
+}
+.card_size_s{
+	padding-right: 30px;
+	flex-basis: 540px;
+	&:hover,&:focus{
+		transition: 0.5s;
+		background-color: #0071bc;
+		.card__img_size_s{
+			margin:0 20px 0 0;
+			width: 200px;
+			height: 200px;
+		}
+	}
+}
+.card__img{
+	transition: 0.5s;
+	overflow: hidden;
+}
+.card__img_size_s{
+	float: left;
+	margin: 10px 30px 10px 10px;
+	width: 180px;
+	height: 180px;
+}
+.card__sport-type{
+	font-family: "Open-sans", arial;
+	font-size: 12px;
+	text-transform: uppercase;
+	color:#cb1174;
+	font-weight: bold;
+}
+.card__text{
+	font-family: "Open-sans", arial;
+	font-size: 13px;
+	line-height: 26px;
+}
+.card__title{
+	padding: 30px 0 20px;
+}
+// End common
 
-1. Slider
-===========================*/
+//Main section (first screen)
+//============================================
 
+.section_main{
+	background-color: #000;
+	background-image: url('../i/slider-main/1.jpg');
+	background-position: center top;
+	background-size: 100% auto;
+	padding-top: 470px;
+}
+.main-title{
+	font-family: "Hamurz", arial;
+	font-size: 100px;
+	color: #fff;
+}
+.quote_main{
+	padding:30px 0 90px;
+	max-width: 770px;
+	min-width: 300px;
+}
+.button_main{
+	padding: 20px 25px;
+}
 
+// End main section
 
-/* 1. Slider
-===========================*/
+//Programs section
+//============================================
+.vertical-card {
+	overflow: hidden;
+	transition: 0.5s;	
+	flex-basis: 270px;
+	height: 580px;
+	&:hover,&:focus{
+		.vertical-card__img{
+			height: 370px;
+			width: 260px;
+			img{
+				height: 370px;
+				width: auto;
+				opacity: 0.7;
+			}
+		}
+		padding-top: 5px;
+		height: 575px;
+	}
+}
+.vertical-card_programs{
+	background-color: #ff1b22;
+	margin: 10px;
+}
+.vertical-card__img{
+	background-color: #000;
+	margin: 0px auto;
+	transition: 0.5s;
+	height: 500px;
+	width: 270px;
+	overflow: hidden;
+	img{
+		transition: 0.5s;
+		height: 500px;
+		width: auto;
+	}
+}
+.vertical-card__title_programs{
+	padding: 35px 0 40px;
+}
+.vertical-card__button{
+	position: relative;
+}
+
+// End Programs section
+
+//Coaches section
+//============================================
+.section_coaches{
+	background-color: #000;
+}
