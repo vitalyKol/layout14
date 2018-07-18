@@ -7,7 +7,7 @@
 	padding: 110px 0;
 }
 .wrapper{
-	width: 1170px;
+	max-width: 1170px;
 	margin: auto;
 }
 .title{
@@ -61,6 +61,12 @@
 	color:#fff;
 	background: transparent;
 	padding: 20px 15px;
+	transition: 0.5s;
+	&:hover, &:focus{
+		background-color: #fff;
+		color:@extra-first-color;
+		cursor: pointer;
+	}
 }
 .flex-row{
 	display: flex;
@@ -81,25 +87,92 @@
 .card_size_s{
 	padding-right: 30px;
 	flex-basis: 540px;
+	margin: 10px;
+}
+.card_size_m{
+	padding-right: 30px;
+	max-width: 570px;
+	min-width: 460px;
+	height: 300px;
+}
+.card_size_b{
+	box-sizing: border-box;
+	padding-top: 1px; //????????
+	max-width: 570px;
+	min-width: 460px;
+	height: 630px;
+	.content{
+		padding: 10px 30px 30px;
+	}
+}
+.card_theme_hover-blue{
 	&:hover,&:focus{
 		transition: 0.5s;
-		background-color: #0071bc;
+		background-color: @extra-second-color;
 		.card__img_size_s{
 			margin:0 20px 0 0;
 			width: 200px;
 			height: 200px;
+		}
+		.card__social-button{
+			border: 1px solid #fff;
+			color: #fff;
+			&:hover,&:focus{
+				background-color: #fff;
+				color:@extra-second-color;
+			}
+		}
+		.card__title{
+			color: #fff;
+		}
+		.card__sport-type{
+			color:#4f4c86;
+		}
+		color:#fff;
+	}
+}
+.card_theme_hover-transparent{
+	&:hover,&:focus{
+		padding-top: 0px;
+		transition: 0.5s;
+		.card__img_size_m{
+			margin:0 20px 0 0;
+			width: 200px;
+			height: 300px;
+		}
+		.card__img_size_b{
+			margin: 0px;
+			width: 570px;
+			height: 330px;
+		}
+		.card__social-button{
+			&:hover,&:focus{
+				border-color: @extra-second-color;
+				background-color: @extra-second-color;
+				color: #fff;
+			}
 		}
 	}
 }
 .card__img{
 	transition: 0.5s;
 	overflow: hidden;
+	margin: 10px 30px 10px 10px;
 }
 .card__img_size_s{
 	float: left;
-	margin: 10px 30px 10px 10px;
 	width: 180px;
 	height: 180px;
+}
+.card__img_size_m{
+	float: left;
+	width: 180px;
+	height: 280px;
+}
+.card__img_size_b{
+	margin:10px;
+	width: 550px;
+	height: 310px;
 }
 .card__sport-type{
 	font-family: "Open-sans", arial;
@@ -112,10 +185,27 @@
 	font-family: "Open-sans", arial;
 	font-size: 13px;
 	line-height: 26px;
+	margin:15px 0;
+}
+.card__text_size_m{
+	margin: 45px 0;
+}
+.card__text_size_b{
+	margin: 35px 0;
 }
 .card__title{
 	padding: 30px 0 20px;
 }
+.card__social-button{
+	font-size: 14px;
+	border-radius: 45px;
+	border: 1px solid #d1d1d1;
+	color: #000;
+	padding: 7px 10px;
+	transition: 0.5s;
+}
+
+
 // End common
 
 //Main section (first screen)
@@ -166,7 +256,7 @@
 	}
 }
 .vertical-card_programs{
-	background-color: #ff1b22;
+	background-color:@extra-first-color;
 	margin: 10px;
 }
 .vertical-card__img{
@@ -196,3 +286,143 @@
 .section_coaches{
 	background-color: #000;
 }
+
+// End Coaches section
+
+//Video section
+//============================================
+
+// End Video section
+
+//Fitness post section
+//============================================
+
+.section_fitness-post{
+	background-color: @extra-first-color;
+}
+.fitness-post__grid-container{
+	display: grid;
+	grid-template-columns: 1fr 30px 1fr;
+	grid-template-rows: 1fr 30px 1fr;
+	grid-template-areas: "el1 . el3"
+						 ".   . el3"
+						 "el2 . el3";
+}
+.fitness-post__grid-element{
+}
+.element-1{
+	grid-area: el1;
+}
+.element-2{
+	grid-area: el2;
+}
+.element-3{
+	grid-area: el3;
+}
+.fitness-post__flex-right{
+	display: flex;
+	justify-content: flex-end;
+}
+.fitness-post__button-div{
+	margin-top:120px;
+}
+// End Fitness post section
+
+//Testimonials section
+//============================================
+
+.testimonials{
+	max-width: 1170px;
+	margin: auto;
+	position: relative;
+}
+.testimonials__img{
+	max-height:470px;
+	margin:auto; 
+}
+.testimonials__block-text{
+	background-color: @extra-second-color;
+	min-height: 215px;
+	padding:30px 30px 90px;
+	color:#fff;
+}
+.testimonials__top-text{
+	font-family: "Bukhari_Script";
+	font-size: 18px;
+	line-height: 30px;
+	span{
+		font-family: "Open-sans";
+		font-size: 12px;
+		text-transform: uppercase;
+		line-height: 30px;
+	}
+}
+.testimonials__text{
+	font-family: "Open-sans-italic";
+	font-size: 14px;
+	line-height: 26px;
+	margin-top:50px;
+}
+.testimonials__controls{
+	position: absolute;
+	bottom: 30px;
+	&_left{
+		left:30px;
+	}
+	&_right{
+		left:90px;
+	}
+}
+
+
+// End testimonials
+
+
+
+//Instagram section
+//============================================
+.instagram{
+	display: flex;
+	justify-content: center;
+}
+.instagram__item{
+	overflow: hidden;
+	min-width: 150px;
+	position: relative;
+	&:hover,&focus{
+		.instagram__item-overline{
+			display: block;
+		}
+	}
+}
+.instagram__item-overline{
+	display: none;
+	position: absolute;
+	box-sizing: border-box;
+	top:0;
+	border-top: 5px solid @extra-first-color;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+}
+.instagram__icons {
+	color:#fff;
+	position: absolute;
+	bottom: 10px;
+	padding: 5px;
+	cursor: pointer;
+	&:hover,&focus{
+		color:@extra-first-color;
+	}
+}
+.instagram__button{
+	background: transparent;
+	border: none;
+	right: 40px;
+}
+.instagram__link{
+	right: 10px;
+}
+
+
+// End Instagram
